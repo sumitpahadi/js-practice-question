@@ -218,7 +218,7 @@ Overall, promises provide a more elegant and structured approach to asynchronous
      .catch(function(error) {
     console.log('Error:', error);
     });
-----
+```
 
 
 ## What is the DOM?
@@ -228,22 +228,24 @@ Overall, promises provide a more elegant and structured approach to asynchronous
 ## What are closures? Give an example of closure
   - Closures are a combination of a function and the lexical environment within which that function was declared. They allow a function to retain 
   - access to variables from its outer scope even after the outer function has finished executing.
-  ```javascript
-   Examples----
-   function outerFunction() {
-   - var outerVariable = 'Hello';
 
-   function innerFunction() {
-    var innerVariable = 'World';
+    ```
+    function outerFunction() {
+    var outerVariable = 'Hello';
+
+    function innerFunction() {
+     var innerVariable = 'World';
     console.log(outerVariable + ' ' + innerVariable);
+    }
+
+    return innerFunction;
    }
 
-   return innerFunction;
-   }
+    var closure = outerFunction();
+    closure(); // Output: Hello World
+    ```
 
-   var closure = outerFunction();
-   closure(); // Output: Hello World
-   ----
+
 
 
 ##  How many operators do we have in JS ?
@@ -285,6 +287,6 @@ Overall, promises provide a more elegant and structured approach to asynchronous
     console.log('Hello!');
     }
     };
-    ----
+    ```
 
 
