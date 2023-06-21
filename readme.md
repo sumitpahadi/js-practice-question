@@ -156,3 +156,134 @@ Example:
      console.log(0 / 0); // Output: NaN
 ---
 
+## ***Day 3*** 
+
+## What are promises and why do we need them?
+    - Promises are a feature in JavaScript that help handle asynchronous operations. They represent the eventual completion or failure of an -     - asynchronous task and allow you to write asynchronous code in a more readable and manageable way.
+
+    - Here are a few reasons why we need promises:
+
+1. Improved Readability: Promises provide a more structured and readable approach to asynchronous programming compared to callback-based code. They allow you to chain multiple asynchronous operations together, making the code flow more linear and easier to understand.
+
+2. Error Handling: Promises provide built-in error handling capabilities. They allow you to attach a `.catch()` callback to handle any errors that occur during the execution of asynchronous operations. This simplifies the error-handling process and allows you to centralize error handling logic.
+
+3. Avoid Callback Hell: Promises help avoid the problem of callback hell, which occurs when dealing with multiple nested callbacks. Promises allow you to chain asynchronous operations together using `.then()` callbacks, creating a more readable and manageable code structure.
+
+4. Asynchronous Control Flow: Promises provide control over the flow of asynchronous operations. They allow you to define dependencies between multiple asynchronous tasks, ensuring that one task executes only after another has completed successfully.
+
+5. Compatibility: Promises are supported in modern JavaScript environments, making them widely compatible across different platforms and browsers. They are now a standard part of the JavaScript language and are often used in conjunction with other asynchronous features like `async/await`.
+
+Overall, promises provide a more elegant and structured approach to asynchronous programming in JavaScript, making code easier to read, write, and maintain. They streamline error handling and control flow, leading to more robust and manageable asynchronous code.
+
+## What is promise chaining
+
+  - Promise chaining is a technique used to sequentially execute multiple asynchronous operations that depend on each other. It allows you to 
+  - chain -together multiple promises, where each promise represents an asynchronous task, and the result of one promise is used as input for the - next -promise in the chain.
+
+   - In promise chaining, you can use the `.then()` method to attach a callback function to a promise. This callback function receives the 
+   - resolved -value of the previous promise and returns a new promise. By returning a new promise, you can chain another `.then()` method to it, and so on.
+
+   - Here's an example of promise chaining:
+
+    - javascript
+     Examples----
+     function fetchUser() {
+     return new Promise(function(resolve, reject) {
+      setTimeout(function() {
+      resolve({ id: 1, name: 'John Doe' });
+      }, 1000);
+     });
+    }
+
+    function fetchPosts(userId) {
+     return new Promise(function(resolve, reject) {
+       setTimeout(function() {
+         if (userId === 1) {
+        resolve(['Post 1', 'Post 2', 'Post 3']);
+         } else {
+          reject('User not found');
+         }
+       }, 1000);
+     });
+    }
+
+    fetchUser()
+    .then(function(user) {
+    console.log('User:', user);
+    return fetchPosts(user.id);
+     })
+     .then(function(posts) {
+    console.log('Posts:', posts);
+     })
+     .catch(function(error) {
+    console.log('Error:', error);
+    });
+----
+
+
+## What is the DOM?
+    - The DOM (Document Object Model) is a programming interface provided by web browsers that represents the structure of an HTML or XML document - as a tree-like structure. It defines the way in which web pages are structured and how they can be manipulated and interacted with using - - - programming languages like JavaScript.
+
+
+## What are closures? Give an example of closure
+  - Closures are a combination of a function and the lexical environment within which that function was declared. They allow a function to retain 
+  - access to variables from its outer scope even after the outer function has finished executing.
+   Examples----
+   function outerFunction() {
+  var outerVariable = 'Hello';
+
+   function innerFunction() {
+    var innerVariable = 'World';
+    console.log(outerVariable + ' ' + innerVariable);
+   }
+
+   return innerFunction;
+   }
+
+   var closure = outerFunction();
+   closure(); // Output: Hello World
+
+
+   ----
+
+
+##  How many operators do we have in JS ?
+  - JavaScript has various operators that allow you to perform different operations on values. Here's an overview of the different types of
+   - operators in JavaScript:
+
+1. Arithmetic Operators: Used for performing mathematical calculations, such as addition (+), subtraction (-), multiplication (*), division (/), modulo (%), increment (++), and decrement (--).
+
+2. Assignment Operators: Used to assign values to variables, including simple assignment (=), compound assignment with arithmetic operators (+=, -=, *=, /=, %=), and others (e.g., **= for exponentiation).
+
+3. Comparison Operators: Used to compare values and return a Boolean result, including equal to (==), not equal to (!=), strict equal to (===), strict not equal to (!==), greater than (>), less than (<), greater than or equal to (>=), and less than or equal to (<=).
+
+4. Logical Operators: Used to perform logical operations and return a Boolean result, including logical AND (&&), logical OR (||), and logical NOT (!).
+
+5. Bitwise Operators: Used to perform bitwise operations on binary representations of numbers, including bitwise AND (&), bitwise OR (|), bitwise XOR (^), bitwise NOT (~), left shift (<<), right shift (>>), and unsigned right shift (>>>).
+
+6. Unary Operators: Used to operate on a single operand, including unary plus (+), unary minus (-), prefix increment (++), prefix decrement (--), logical NOT (!), bitwise NOT (~), typeof, and delete.
+
+7. Ternary Operator: The only ternary operator in JavaScript is the conditional operator (?:), which provides a shorthand way of writing if-else statements.
+
+8. String Operators: The plus (+) operator is used for concatenating strings together.
+
+9. Type Operators: Used to determine the type of a value, including typeof and instanceof.
+
+10. Comma Operator: The comma operator (,) is used to evaluate multiple expressions and return the result of the last expression.
+
+## What are objects in javascript?
+
+  -In JavaScript, objects are one of the fundamental data types and are used to represent real-world entities, concepts, or structures. They are
+  - collections of key-value pairs, where each value can be of any data type, including other objects.
+    
+
+    var person = {
+  name: 'John Doe',
+  age: 30,
+  email: 'johndoe@example.com',
+  sayHello: function() {
+    console.log('Hello!');
+  }
+};
+
+
