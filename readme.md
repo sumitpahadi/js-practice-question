@@ -276,6 +276,7 @@ Overall, promises provide a more elegant and structured approach to asynchronous
   -In JavaScript, objects are one of the fundamental data types and are used to represent real-world entities, concepts, or structures. They are
   - collections of key-value pairs, where each value can be of any data type, including other objects.
     
+    Example----
 
     var person = {
   name: 'John Doe',
@@ -285,5 +286,6 @@ Overall, promises provide a more elegant and structured approach to asynchronous
     console.log('Hello!');
   }
 };
+----
 
 
