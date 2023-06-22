@@ -228,7 +228,7 @@ Overall, promises provide a more elegant and structured approach to asynchronous
 ## What are closures? Give an example of closure
   - Closures are a combination of a function and the lexical environment within which that function was declared. They allow a function to retain 
   - access to variables from its outer scope even after the outer function has finished executing.
-
+     ```javascript
     Examples----
     function outerFunction() {
     var outerVariable = 'Hello';
@@ -280,7 +280,7 @@ Overall, promises provide a more elegant and structured approach to asynchronous
   -In JavaScript, objects are one of the fundamental data types and are used to represent real-world entities, concepts, or structures. They are
   - collections of key-value pairs, where each value can be of any data type, including other objects.
     
- 
+     ```javascript
     Example----
      var person = {
     name: 'John Doe',
@@ -292,7 +292,7 @@ Overall, promises provide a more elegant and structured approach to asynchronous
     };
     
 
-    ----
+    
 
 
 ## ***Day 4*** 
