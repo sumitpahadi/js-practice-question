@@ -417,14 +417,14 @@ Overall, promises provide a more elegant and structured approach to asynchronous
 - A prototype is an object from which other objects inherit properties and methods. When you access a property or method on an object, JavaScript - first looks for it directly on the object itself. If it doesn't find it, it then checks the object's prototype ([[Prototype]]). This process
  - continues up the prototype chain until the property or method is found or until the end of the chain is reached (where the prototype is null).
 
-     ```javascript  
-    Example----
+    ```javascript  
+   Example----
    function Person(name) {
    this.name = name;
    }
 
    Person.prototype.greet = function() {
-  console.log(`Hello, my name is ${this.name}.`);
+   console.log(`Hello, my name is ${this.name}.`);
    };
 
    const person1 = new Person('Alice');
