@@ -218,7 +218,7 @@ Overall, promises provide a more elegant and structured approach to asynchronous
      .catch(function(error) {
     console.log('Error:', error);
     });
-```
+
 
 
 ## What is the DOM?
@@ -229,7 +229,7 @@ Overall, promises provide a more elegant and structured approach to asynchronous
   - Closures are a combination of a function and the lexical environment within which that function was declared. They allow a function to retain 
   - access to variables from its outer scope even after the outer function has finished executing.
 
-    ```
+    Examples----
     function outerFunction() {
     var outerVariable = 'Hello';
 
@@ -243,14 +243,17 @@ Overall, promises provide a more elegant and structured approach to asynchronous
 
     var closure = outerFunction();
     closure(); // Output: Hello World
-    ```
+
+    ----
+
+   
 
 
 
 
 ##  How many operators do we have in JS ?
   - JavaScript has various operators that allow you to perform different operations on values. Here's an overview of the different types of
-   - operators in JavaScript:
+  - operators in JavaScript:
 
 1. Arithmetic Operators: Used for performing mathematical calculations, such as addition (+), subtraction (-), multiplication (*), division (/), modulo (%), increment (++), and decrement (--).
 
@@ -277,7 +280,7 @@ Overall, promises provide a more elegant and structured approach to asynchronous
   -In JavaScript, objects are one of the fundamental data types and are used to represent real-world entities, concepts, or structures. They are
   - collections of key-value pairs, where each value can be of any data type, including other objects.
     
-   ```javascript
+ 
     Example----
      var person = {
     name: 'John Doe',
@@ -287,6 +290,9 @@ Overall, promises provide a more elegant and structured approach to asynchronous
     console.log('Hello!');
     }
     };
-    ```
+    
+
+    ----
+
 
 ## ***Day 4*** 
