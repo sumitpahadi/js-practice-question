@@ -295,4 +295,140 @@ Overall, promises provide a more elegant and structured approach to asynchronous
     
 
 
-## ***Day 4*** 
+## ***Day 4***
+
+## What are objects in javascript?
+- In JavaScript, objects are one of the fundamental data types and are used to represent real-world entities, concepts, or structures. They are 
+- collections of key-value pairs, where each value can be of any data type, including other objects.
+
+- Objects in JavaScript are created using curly braces {} and can contain properties and methods. Properties are the key-value pairs that define 
+- the characteristics or attributes of the object, while methods are functions that are associated with the object and can perform actions or
+ - operations.
+
+    ```javascript
+    Example----
+    var person = {
+    name: 'John Doe',
+    age: 30,
+    email: 'johndoe@example.com',
+    sayHello: function() {
+    console.log('Hello!');
+   }
+   };
+
+
+## What are function constructors?
+ - In JavaScript, function constructors are a way to create objects using a constructor function. A constructor function is a regular JavaScript
+  - function that is used with the new keyword to create new instances of objects with similar properties and methods.
+
+ 
+    ```javascript
+    Example----
+    function Person(name, age, email) {
+    this.name = name;
+    this.age = age;
+    this.email = email;
+  
+    this.sayHello = function() {
+    console.log('Hello! My name is ' + this.name);
+    };
+    }
+
+
+
+## Explain call(), apply() and, bind() methods. Give an example of call(), apply(), bind()
+
+- In JavaScript, the call(), apply(), and bind() methods are used to manipulate the execution context and binding of functions. They allow you to - specify the value of this and pass arguments to functions in different ways. Here's an explanation of each method along with an example:
+  
+   ```javascript
+    Example----
+    function greet(message) {
+    console.log(message + ', ' + this.name);
+    }
+
+   var person = {
+   name: 'John Doe'
+   };
+
+   greet.call(person, 'Hello');
+
+
+- apply(): The apply() method is similar to call(), but it accepts arguments as an array or an array-like object.
+
+   ```javascript
+    Example----
+    function greet(message) {
+    console.log(message + ', ' + this.name);
+    }
+
+    var person = {
+   name: 'John Doe'
+   };
+
+   greet.apply(person, ['Hello']);
+
+
+- bind(): The bind() method creates a new function that, when called, has a specific this value and any specified arguments.
+
+
+    ```javascript
+    Example----
+    function greet(message) {
+    console.log(message + ', ' + this.name);
+    }
+
+    var person = {
+    name: 'John Doe'
+    };
+
+    var greetPerson = greet.bind(person);
+    greetPerson('Hello');
+
+
+
+## What is the purpose of async/await keywords?
+
+
+- async keyword: When you declare a function with the async keyword, it becomes an asynchronous function. It allows you to use the await keyword
+ - inside the function and indicates that the function will always return a Promise.
+
+- await keyword: The await keyword can only be used inside an async function. It pauses the execution of the function until the Promise is
+ - resolved or rejected. It effectively waits for the Promise to settle and then retrieves the resolved value or throws an error if the Promise is - rejected.
+
+    ```javascript  
+    Example----
+    async function fetchData() {
+    try {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    return data;
+    } catch (error) {
+    console.log('Error:', error);
+    }
+    }
+
+
+## Explain prototypes
+
+- In JavaScript, prototypes are a fundamental mechanism used for object inheritance. Every JavaScript object has an internal property called
+ - [[Prototype]], which can be accessed using the __proto__ property (although it's recommended to use the Object.getPrototypeOf() and Object.
+ -  setPrototypeOf() methods for better compatibility).
+
+- A prototype is an object from which other objects inherit properties and methods. When you access a property or method on an object, JavaScript - first looks for it directly on the object itself. If it doesn't find it, it then checks the object's prototype ([[Prototype]]). This process
+ - continues up the prototype chain until the property or method is found or until the end of the chain is reached (where the prototype is null).
+
+     ```javascript  
+    Example----
+   function Person(name) {
+   this.name = name;
+   }
+
+   Person.prototype.greet = function() {
+  console.log(`Hello, my name is ${this.name}.`);
+   };
+
+   const person1 = new Person('Alice');
+   const person2 = new Person('Bob');
+
+   person1.greet(); // Output: Hello, my name is Alice.
+   person2.greet(); // Output: Hello, my name is Bob.
